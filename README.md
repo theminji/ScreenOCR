@@ -4,7 +4,7 @@
 
 ```
 python -m venv .venv
-.venv\scripts\activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
