@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screen OCR Editor</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="crumbs">
+        <span class="title-dot" aria-hidden="true"></span>
+        <span>WORKSPACE / OCR RESULT</span>
+      </div>
+      <div class="actions">
+        <button id="copyBtn" class="icon-btn" title="Copy">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 6.75C0 5.784.784 5 1.75 5h3.5c.966 0 1.75.784 1.75 1.75v6.5A1.75 1.75 0 0 1 5.25 15h-3.5A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h3.5a.25.25 0 0 0 .25-.25v-6.5a.25.25 0 0 0-.25-.25Z"></path><path d="M9.75 1C8.784 1 8 1.784 8 2.75v.5h1.5v-.5a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v6.5a.25.25 0 0 1-.25.25h-.5V11h.5A1.75 1.75 0 0 0 15 9.25v-6.5A1.75 1.75 0 0 0 13.25 1Z"></path></svg>
+          <span>Copy</span>
+        </button>
+        <button id="saveBtn" class="icon-btn primary" title="Save">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75A1.75 1.75 0 0 1 3.75 0h6.69c.464 0 .909.184 1.237.513l2.81 2.81c.329.328.513.773.513 1.237v9.69A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25ZM3.75 1.5a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V5.56a.25.25 0 0 0-.073-.177L10.617 2.57a.25.25 0 0 0-.177-.073ZM8 3a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 3Zm-3 7.75C5 9.784 5.784 9 6.75 9h2.5c.966 0 1.75.784 1.75 1.75v3.5h-1.5v-3.5a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25v3.5H5Z"></path></svg>
+          <span>Save</span>
+        </button>
+        <button id="closeBtn" class="icon-btn danger" title="Close">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 0 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="editor-wrap">
+      <pre id="lineNumbers" class="line-numbers"></pre>
+      <textarea id="editor" spellcheck="false"></textarea>
+    </section>
+
+    <footer class="statusbar">
+
+      <div id="wordCount">WORDS: 0</div>
+    </footer>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
+
